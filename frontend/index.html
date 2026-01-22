@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NutriDetect – Smart Food Freshness Detection</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+ <!-- Top Navigation Bar -->
+<header class="top-nav">
+  <div class="nav-left">
+    <span class="brand-name">NutriDetect</span>
+    <nav class="main-nav">
+      <a href="#home">Home</a>
+      <a href="#scan">Scan Food</a>
+      <a href="#nutrition">Nutrition</a>
+      <a href="#hardware">Hardware</a>
+      <a href="#health">Track Health</a>
+    </nav>
+  </div>
+  <div class="nav-right">
+    <select class="language-select">
+      <option>English</option>
+      <option>Hindi</option>
+      <option>Spanish</option>
+      <option>French</option>
+    </select>
+    <button class="signin-btn"><i class="fas fa-user"></i> Sign In</button>
+    <div class="user-menu">
+      <img src="images/Default_profile_icon.jpeg" alt="User" class="user-icon" id="userIcon" />
+      <div class="dropdown-menu" id="dropdownMenu">
+        <a href="#"><i class="fas fa-user-circle"></i> Profile</a>
+        <a href="#"><i class="fas fa-info-circle"></i> About Us</a>
+        <a href="#"><i class="fas fa-question-circle"></i> Help</a>
+        <a href="#"><i class="fas fa-cog"></i> Settings</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-left fade-in">
+      <h1>Smart Food Freshness & Nutrition Detection</h1>
+      <p class="description">Scan any fruit or vegetable with your camera to instantly analyze freshness, safety, nutritional value, and get health recommendations.</p>
+      
+      <div class="hero-features">
+        <div class="feature-tag">Freshness Detection</div>
+        <div class="feature-tag">Nutrition Analysis</div>
+        <div class="feature-tag">Safety Check</div>
+        <div class="feature-tag">Health Tips</div>
+      </div>
+      
+      <div class="hero-cta">
+        <a href="#scan" class="cta-primary"><i class="fas fa-camera"></i> Scan Food Now</a>
+        <a href="#hardware" class="cta-secondary"><i class="fas fa-microchip"></i> Learn About Hardware</a>
+      </div>
+    </div>
+    <div class="hero-right fade-in">
+      <img src="images/interface_image.png" alt="Food Analysis Dashboard" class="basket-img"/>
+    </div>
+  </section>
+
+  <!-- Nutri Search Categories -->
+  <section class="search-categories" id="nutrition">
+    <h2>NutriSearch Analytics</h2>
+    <p class="section-subtitle">Comprehensive food analysis across multiple dimensions</p>
+    
+    <div class="category-list">
+      <div class="category-card">
+        <div class="category-icon">🥗</div>
+        <h3>Nutritional</h3>
+        <p>Detailed breakdown of vitamins, minerals, calories, and macronutrients in your food.</p>
+      </div>
+      
+      <div class="category-card">
+        <div class="category-icon">👃</div>
+        <h3>Sensory</h3>
+        <p>Analyze appearance, smell, texture, and color to determine food quality and ripeness.</p>
+      </div>
+      
+      <div class="category-card">
+        <div class="category-icon">📏</div>
+        <h3>Physical</h3>
+        <p>Measure size, weight, density, and physical characteristics for quality assessment.</p>
+      </div>
+      
+      <div class="category-card">
+        <div class="category-icon">🧪</div>
+        <h3>Chemical</h3>
+        <p>Detect pesticides, toxins, and chemical composition for food safety assurance.</p>
+      </div>
+      
+      <div class="category-card">
+        <div class="category-icon">❤️</div>
+        <h3>Health Related</h3>
+        <p>Get personalized health recommendations based on your dietary needs and goals.</p>
+      </div>
+      
+      <div class="category-card">
+        <div class="category-icon">🌍</div>
+        <h3>Environment</h3>
+        <p>Track carbon footprint, origin, and sustainability factors of your food choices.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Import/Scan Section -->
+  <section class="import-section" id="scan">
+    <h2>Scan Your Food Items</h2>
+    <p>Upload images or use your camera to analyze freshness, safety, and nutrition in seconds.</p>
+    
+    <div class="scan-container">
+      <div class="scan-methods">
+        <div class="scan-method">
+          <h3><i class="fas fa-camera"></i> Camera Scan</h3>
+          <p>Use your device camera to instantly scan fruits and vegetables for real-time analysis.</p>
+          <button class="upload-btn"><i class="fas fa-camera"></i> Open Camera</button>
+        </div>
+        
+        <div class="scan-method">
+          <h3><i class="fas fa-history"></i> Freshness Check</h3>
+          <p>Get detailed freshness percentage, shelf life estimation, and storage recommendations.</p>
+          <div class="freshness-meter">
+            <div class="freshness-level" style="width: 85%"></div>
+          </div>
+          <p class="freshness-text">Estimated Freshness: <strong>85%</strong></p>
+        </div>
+      </div>
+      
+      <div class="upload-area" id="uploadArea">
+        <div class="upload-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+        <h3>Upload Media</h3>
+        <p>Drag & drop images or videos of fruits/vegetables here, or click to browse files</p>
+        <button class="upload-btn" id="uploadBtn"><i class="fas fa-upload"></i> Upload Now</button>
+        <p class="file-types">Supported: JPG, PNG, MP4, MOV (Max 100MB)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <h2>Why Choose NutriDetect?</h2>
+    
+    <div class="feature-grid">
+      <div class="feature-item">
+        <div class="feature-icon">🔍</div>
+        <h3>Instant Analysis</h3>
+        <p>Get real-time results for freshness, nutritional content, and safety in just 3 seconds.</p>
+      </div>
+      
+      <div class="feature-item">
+        <div class="feature-icon">📊</div>
+        <h3>Detailed Reports</h3>
+        <p>Comprehensive reports with vitamin levels, freshness metrics, and health recommendations.</p>
+      </div>
+      
+      <div class="feature-item">
+        <div class="feature-icon">🏭</div>
+        <h3>Industry Solutions</h3>
+        <p>Hardware devices for supermarkets, farms, and food industries to monitor bulk produce.</p>
+      </div>
+      
+      <div class="feature-item">
+        <div class="feature-icon">📱</div>
+        <h3>Mobile Friendly</h3>
+        <p>Works perfectly on smartphones, tablets, and computers with easy-to-use interface.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hardware Section -->
+  <section class="hardware-section" id="hardware">
+    <div class="hardware-container">
+      <div class="hardware-content">
+        <h2>Industrial Hardware Solutions</h2>
+        <p>For supermarkets, food distributors, and large-scale agriculture operations. Our hardware devices can be installed in crates, storage facilities, or transport vehicles to monitor dozens of fruits and vegetables simultaneously.</p>
+        
+        <div class="hardware-features">
+          <div class="hardware-feature">
+            <span>1</span>
+            <p><strong>Bulk Monitoring:</strong> Scan multiple items simultaneously in crates or containers</p>
+          </div>
+          <div class="hardware-feature">
+            <span>2</span>
+            <p><strong>Real-time Alerts:</strong> Get notifications when produce quality drops below threshold</p>
+          </div>
+          <div class="hardware-feature">
+            <span>3</span>
+            <p><strong>Data Analytics:</strong> Track freshness trends and optimize supply chain management</p>
+          </div>
+        </div>
+        
+        <a href="#" class="cta-primary"><i class="fas fa-microchip"></i> Request Hardware Demo</a>
+      </div>
+      
+      <div class="hardware-visual">
+        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Food Monitoring Hardware" class="device-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-about">
+        <div class="footer-logo">🌱 NutriDetect</div>
+        <p class="footer-description">Revolutionizing food safety and nutrition analysis through AI-powered technology for consumers and industries.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#scan">Scan Food</a></li>
+          <li><a href="#nutrition">Nutrition Analysis</a></li>
+          <li><a href="#hardware">Hardware Solutions</a></li>
+          <li><a href="#">Pricing</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-links">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Research Papers</a></li>
+          <li><a href="#">Food Safety Guidelines</a></li>
+          <li><a href="#">Nutrition Database</a></li>
+          <li><a href="#">API Documentation</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>support@nutridetect.com</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <span>+1 (555) 123-4567</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>123 Tech Street, Silicon Valley, CA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>© 2025 NutriDetect. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
